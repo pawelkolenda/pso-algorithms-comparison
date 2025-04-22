@@ -1,5 +1,7 @@
 # Analysis of Acceleration Coefficients in Particle Swarm Optimization
 
+**Analiza_efektywnosci_wspolczynnikow_przyspieszenia_w_metodach_PSO.pdf** is my master's thesis.
+
 ## Abstract
 
 The purpose of this master thesis was to analyze and evaluate the effectiveness of various acceleration coefficients used in particle swarm optimization (PSO) methods. An original group of speed coefficients has been proposed, based on a solution that assumes a change in the coefficient values over time. It was extended by the momentary and cyclical knocking out of particles from their current positions in the initial and final stages of the algorithm run. The purpose of this modification is to minimize the effect of premature convergence. A console research application was created to conduct research on the quality of coefficients and to generate results. To provide as many results as possible, eight model test functions, five PSO methods, and six groups of coefficients were used. More than two hundred experiments were carried out to show the broadest spectrum of the quality of the proposed coefficients.
