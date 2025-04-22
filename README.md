@@ -1,17 +1,24 @@
-# Particle Swarm Optimization (PSO) Algorithms Comparison
+# Analysis of Acceleration Coefficients in Particle Swarm Optimization
 
-This project implements and compares different variants of Particle Swarm Optimization (PSO) algorithms for solving optimization problems. The project evaluates various PSO modifications including different neighborhood topologies and selection mechanisms.
+## Abstract
+
+The purpose of this master thesis was to analyze and evaluate the effectiveness of various acceleration coefficients used in particle swarm optimization (PSO) methods. An original group of speed coefficients has been proposed, based on a solution that assumes a change in the coefficient values over time. It was extended by the momentary and cyclical knocking out of particles from their current positions in the initial and final stages of the algorithm run. The purpose of this modification is to minimize the effect of premature convergence. A console research application was created to conduct research on the quality of coefficients and to generate results. To provide as many results as possible, eight model test functions, five PSO methods, and six groups of coefficients were used. More than two hundred experiments were carried out to show the broadest spectrum of the quality of the proposed coefficients.
+
+**Keywords:** particle swarm optimization, PSO, efficiency, coefficients, velocity
 
 ## Project Description
 
-The project implements several PSO variants:
+This research project implements and compares different variants of Particle Swarm Optimization (PSO) algorithms with a focus on analyzing various acceleration coefficients. The project evaluates the effectiveness of different coefficient configurations across multiple PSO modifications:
+
 - Classic PSO
 - PSO with Ring Topology
 - PSO with Spatial Neighborhood
 - PSO with Star Topology
 - PSO with Selection Mechanism
 
-Each algorithm is tested on multiple benchmark functions:
+The research includes six different groups of acceleration coefficients, with special attention to time-varying coefficients and mechanisms to prevent premature convergence.
+
+Each algorithm configuration is tested on eight benchmark functions:
 - Sphere Function
 - F2 Function
 - Rosenbrock Function
@@ -21,7 +28,7 @@ Each algorithm is tested on multiple benchmark functions:
 - Schwefel Function
 - Zakharov Function
 
-The project includes visualization capabilities to compare the performance of different algorithms and functions.
+The project includes comprehensive visualization and analysis capabilities to compare the performance of different coefficient configurations across various algorithms and functions.
 
 ## Technologies Used
 
@@ -46,7 +53,7 @@ The project includes visualization capabilities to compare the performance of di
 ├── evaluator.py              # Algorithm evaluation
 ├── plot_result.py            # Result visualization
 ├── functions_factory.py      # Benchmark functions factory
-├── coefficient_factory.py    # Coefficient generation
+├── coefficient_factory.py    # Coefficient generation and analysis
 ├── config.json               # Configuration file
 └── clean_results.py          # Results cleanup utility
 ```
@@ -73,6 +80,7 @@ The project can be configured through the `config.json` file, which includes par
 - Number of runs
 - Number of neighborhoods
 - Number of tournament particles
+- Coefficient configurations
 
 ## Usage
 
@@ -86,10 +94,14 @@ python main.py
 3. The results will be:
    - Exported to Excel files in the `results` directory
    - Visualized using Matplotlib plots
+   - Analyzed for coefficient effectiveness
 
 ## Results
 
-The project generates:
-- Excel files with detailed results for each algorithm and function combination
-- Visual plots comparing the performance of different algorithms
-- Average best solutions per iteration for analysis
+The project generates comprehensive results including:
+- Detailed analysis of coefficient effectiveness across different PSO variants
+- Performance comparison of time-varying coefficients
+- Evaluation of premature convergence prevention mechanisms
+- Statistical analysis of over 200 experiments
+- Visual plots comparing the performance of different coefficient configurations
+- Average best solutions per iteration for detailed analysis
